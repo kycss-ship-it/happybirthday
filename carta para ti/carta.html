@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url("fondo4.jpg") no-repeat center center fixed;
+      background-size: contain;   /* muestra toda la imagen completa */
+      background-color: #ffffff;  /* rellena espacios vacíos con blanco */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      position: relative; /* necesario para colocar globos */
+    }
+
+    .carta-box {
+      background: rgba(255,255,255,0.85);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      max-width: 600px;
+      width: 90%; /* se adapta en móvil */
+    }
+
+    h1 {
+      color: #e67895;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Globos en las esquinas */
+    .globo {
+      position: absolute;
+      width: 300px;   /* tamaño original */
+      height: auto;
+    }
+
+    .globo-top-left { top: 10px; left: 10px; }
+    .globo-top-right { top: 10px; right: 10px; }
+    .globo-bottom-left { bottom: 10px; left: 10px; }
+    .globo-bottom-right { bottom: 10px; right: 10px; }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 600px) {
+      h1 { font-size: 20px; }
+      p { font-size: 16px; }
+      .globo { width: 150px; } /* reduce globos en móvil */
+      .carta-box { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="carta-box">
+  <h1>¡FELIZ CUMPLE!</h1>
+  <p>
+    QUERIDO JULIO,<br><br>
+    NO SABES CUÁNTO NOS ALEGRA PODER COMPARTIR ESTE DÍA TAN ESPECIAL CONTIGO.
+    AUNQUE NO LLEVAMOS MUCHO TIEMPO CONOCIÉNDONOS, DESDE EL PRINCIPIO SABIAMOS QUE ERES UNA PERSONA INCREÍBLE, CON UNA LUZ ÚNICA Y UN CORAZÓN MARAVILLOSO.
+    QUEREMOS DESARTE LO MÁS BONITO EN LA VIDA Y QUE TODOS TUS SUEÑOS SE HAGAN REALIDAD. NUNCA PERMITAS QUE NADIE TE QUITE ESA ALEGRÍA QUE TE HACEN TAN ESPECIAL. 
+    SÉ FELIZ, MUY FELIZ, PORQUE TÚ LO MERECES MÁS QUE NADIE.
+    TE QUEREMOS MUCHÍSIMO, ESPERAMOS QUE DISFRUTES ESTE DÍA AL MÁXIMO PORQUE ES TODO TUYO.
+    NUNCA OLVIDES LO INCREÍBLE QUE ERES. AQUÍ ESTAREMOS PARA TI, EN CADA MOMENTO QUE NECESITES APOYO O RISAS. 
+  </p>
+  <p><strong>ATENTAMENTE:<br>GRUPO RESULTADOS +400</strong></p>
+</div>
+
+<!-- Globos decorativos -->
+<img src="18.png" alt="Globo" class="globo globo-top-left">
+<img src="globo1.png" alt="Globo" class="globo globo-top-right">
+<img src="globo2.png" alt="Globo" class="globo globo-bottom-left">
+<img src="globo3.png" alt="Globo" class="globo globo-bottom-right">
+
+</body>
+</html>
