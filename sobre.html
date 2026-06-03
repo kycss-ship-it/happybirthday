@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre con corazón</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    h1 {
+      color: #fbd2dd;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    /* Contenedor del sobre */
+    .envelope-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .envelope-container img {
+      width: 450px;   /* tamaño fijo en PC */
+      height: auto;
+      display: block;
+    }
+
+    /* Botón corazón centrado en el sobre */
+    .heart-btn {
+      position: absolute;
+      top: 40%;   /* mantiene tu posición original */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #e67895;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Botón abrir carta debajo del corazón */
+    .open-btn {
+      position: absolute;
+      top: 75%;   /* mantiene tu posición original */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Imagen decorativa en la esquina inferior izquierda */
+    .corner-image {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: 735px;   /* tamaño original */
+      height: auto;
+    }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 600px) {
+      h1 { font-size: 18px; }
+      .envelope-container img { width: 300px; } /* reduce sobre */
+      .heart-btn { width: 50px; height: 50px; font-size: 20px; }
+      .open-btn { font-size: 14px; padding: 8px 16px; }
+      .corner-image { width: 250px; } /* reduce imagen decorativa */
+    }
+  </style>
+</head>
+<body>
+
+<h1>Para Julio, con todo nuestro corazón ˖ . ݁𝜗𝜚. ݁₊</h1>
+
+<div class="envelope-container">
+  <img src="sobre.png" alt="Sobre">
+  <button class="heart-btn">❤</button>
+  <button class="open-btn" onclick="abrirCarta()">Abrir carta</button>
+</div>
+
+<img src="fondo2.png" alt="Decoración" class="corner-image">
+
+<script>
+  function abrirCarta(){
+    window.location.href = "carta.html";
+  }
+</script>
+
+</body>
+</html>

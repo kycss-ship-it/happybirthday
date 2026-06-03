@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+
+      /* Imagen de fondo completa */
+      background: url("fondo.jpg") no-repeat center center fixed;
+      background-size: contain;   /* muestra toda la imagen completa */
+      background-color: #ffffff;  /* color detrás si sobran espacios */
+    }
+
+    .login-box {
+      background: rgba(255,255,255,0.85);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      width: 90%;        /* ocupa casi todo el ancho en móvil */
+      max-width: 350px;  /* límite en pantallas grandes */
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #e6a9b7;
+      font-size: 22px;   /* tamaño adaptable */
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      text-align: center;
+      width: 80%;        /* se adapta al ancho */
+      max-width: 200px;  /* límite en pantallas grandes */
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      background: #e6a9b7;
+      color: #ffffff;
+      width: 80%;        /* ocupa buen espacio en móvil */
+      max-width: 200px;
+    }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 600px) {
+      h1 { font-size: 18px; }
+      input[type="password"] { font-size: 16px; }
+      .btn { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-box">
+  <h1>Ingresa la contraseña</h1>
+  <input type="password" id="passwordInput" placeholder="****">
+  <br>
+  <button class="btn" id="checkPassword">Acceder</button>
+</div>
+
+<script>
+  const checkBtn = document.getElementById("checkPassword");
+  const input = document.getElementById("passwordInput");
+
+  checkBtn.addEventListener("click", ()=>{
+    if(input.value === "0406"){ 
+      window.location.href = "index.html"; // redirige al sobre
+    } else {
+      alert("Contraseña incorrecta ❌");
+    }
+  });
+</script>
+
+</body>
+</html>
